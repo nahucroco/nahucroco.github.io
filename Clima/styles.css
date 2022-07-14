@@ -11,60 +11,6 @@ body{
     flex-direction: column;
 }
 
-.busqueda{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 80px;
-}
-
-.busqueda > div{
-    display: inline-block;
-    position: relative;
-
-}
-
-.busqueda > div:after{
-    content: "";
-    background: #A18276;
-    width: 4px;
-    height: 20px;
-    position: absolute;
-    top: 40px;
-    right: 2px;
-    transform: rotate(135deg);
-}
-
-.busqueda > div > input{
-    color: #A18276;
-    font-size: 16px;
-    background: transparent;
-    width: 25px;
-    height: 25px;
-    padding: 10px;
-    border: solid 3px #A18276;
-    outline: none;
-    border-radius: 35px;
-    transition: width 0.5s;
-}
-
-.busqueda > div > input::placeholder{
-    color: #A18276;
-    opacity: 0%;
-    transition: opacity 150ms ease-out;
-}
-
-.busqueda > div > input:focus::placeholder{
-    opacity: 1;
-}
-
-.busqueda > div > input:focus,
-.busqueda > div > input:not(:placeholder-shown){
-    width: 250px;
-}
-
-
-
 #container{
     background-color: #A18276;
     padding: 20px;
