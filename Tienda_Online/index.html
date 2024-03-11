@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <span class="navbar-brand h1 mb-0" href="#">TODOPHONE</span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active link-light" aria-current="page" href="#"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active link-light" href="#">Nosotros</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active link-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Articulos
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li>
+                  <a class="dropdown-item link-light" href="#">Celulares</a>
+                </li>
+                <li>
+                  <a class="dropdown-item link-light" href="#">Tablets</a>
+                </li>
+                <li>
+                  <a class="dropdown-item link-light" href="#">Auriculares</a>
+                </li>
+                <li><a class="dropdown-item link-light" href="#">Fundas</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active link-light" href="#"><box-icon type='solid' name='cart' color='white'></box-icon></a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-primary" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <header class="header">
+      <section class="sec-samsung d-flex flex-column mb-4">
+        <h1 class="p-2">Samsung Galaxy S22+</h1>
+        <h2 class="p-2">La ultima tecnología. Para vos. Acá.</h2>
+        <p class="p-2">$349.999</p>
+        <button class="btn btn-primary p-2">Comprar</button>
+      </section>
+    </header>
+
+    <section class="sec-2 d-flex justify-content-around">
+      <div class="p-2 div-smartwatch d-flex flex-column mb-3">
+        <h1>Xiaomi Mi Band 6</h1>
+        <h2>Escucha tu cuerpo, lleva una vida saludable.</h2>
+        <p>$15.999</p>
+      </div>
+      <div class="p-2 div-headphones d-flex flex-column mb-3">
+        <h1>Xiaomi Airdots 2</h1>
+        <h2>Sonido unico a un precio inmejorable.</h2>
+        <p>$6.499</p>
+      </div>
+    </section>
+
+    <section
+      class="sec-items d-flex justify-content-around p-3 border-top border-bottom border-dark"
+    >
+      <div class="d-flex flex-row">
+        <div>
+          <box-icon name="package" size="80px"></box-icon>
+        </div>
+        <div class="d-flex flex-column justify-content-center p-3">
+          <span>Hacemos envios</span>
+          <p>Por solo $150</p>
+        </div>
+      </div>
+      <div class="d-flex flex-row">
+        <div>
+          <box-icon name="credit-card-front" size="80px"></box-icon>
+        </div>
+        <div class="d-flex flex-column justify-content-center p-3">
+          <span>Aceptamos tarjetas</span>
+          <p>Credito y debito</p>
+        </div>
+      </div>
+      <div class="d-flex flex-row">
+        <div>
+          <box-icon name="support" size="80px"></box-icon>
+        </div>
+        <div class="d-flex flex-column justify-content-center p-3">
+          <span>Numero de soporte</span>
+          <p>(555) 555-5555</p>
+        </div>
+      </div>
+      <div class="d-flex flex-row">
+        <div>
+          <box-icon type="solid" name="user-check" size="80px"></box-icon>
+        </div>
+        <div class="d-flex flex-column justify-content-center p-3">
+          <span>Showroom abierto</span>
+          <p>Con la mejor atencion</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="Carousel">
+      <h2>Celulares</h2>
+      <div class="slick-list" id="slick-list">
+        <button
+          class="slick-arrow slick-prev"
+          id="button-prev"
+          data-button="button-prev"
+          onclick="app.processingButton(event)"
+        >
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="chevron-left"
+            class="svg-inline--fa fa-chevron-left fa-w-10"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <path
+              fill="currentColor"
+              d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+            ></path>
+          </svg>
+        </button>
+        <div class="slick-track" id="track">
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular1-1.png"
+                alt=""
+                style="width: 350px"
+              />
+              <h4><small>Moto EDGE 30</small>$120.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular2-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy A03s</small>$55.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular3-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy M23</small>$110.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular4-1.png"
+                alt=""
+                style="width: 350px"
+              />
+              <h4><small>Moto G51</small>$73.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular5-1.png"
+                alt=""
+                style="width: 350px"
+              />
+              <h4><small>Moto G71</small>$89.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular6-1.png"
+                alt=""
+                style="width: 350px"
+              />
+              <h4><small>Moto G32</small>$68.000</h4>
+            </div>
+          </a>
+
+          <a href="./articulo.html" class="slick">
+            <div>
+              <img
+                src="./imagenes/celular7-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy A04</small>$65.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular8-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy M13</small>$76.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular9-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy A53</small>$150.000</h4>
+            </div>
+          </a>
+        </div>
+        <button
+          class="slick-arrow slick-next"
+          id="button-next"
+          data-button="button-next"
+          onclick="app.processingButton(event)"
+        >
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="chevron-right"
+            class="svg-inline--fa fa-chevron-right fa-w-10"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <path
+              fill="currentColor"
+              d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="Carousel">
+      <h2>Tablets</h2>
+      <div class="slick-list" id="slick-list">
+        <button
+          class="slick-arrow slick-prev"
+          id="button-prev"
+          data-button="button-prev"
+          onclick="app.processingButton(event)"
+        >
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="chevron-left"
+            class="svg-inline--fa fa-chevron-left fa-w-10"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <path
+              fill="currentColor"
+              d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+            ></path>
+          </svg>
+        </button>
+        <div class="slick-track" id="track">
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular1-1.png"
+                alt=""
+                style="width: 350px"
+              />
+              <h4><small>Moto EDGE 30</small>$120.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular2-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy A03s</small>$55.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular3-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy M23</small>$110.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular4-1.png"
+                alt=""
+                style="width: 350px"
+              />
+              <h4><small>Moto G51</small>$73.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular5-1.png"
+                alt=""
+                style="width: 350px"
+              />
+              <h4><small>Moto G71</small>$89.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular6-1.png"
+                alt=""
+                style="width: 350px"
+              />
+              <h4><small>Moto G32</small>$68.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular7-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy A04</small>$65.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular8-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy M13</small>$76.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular9-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy A53</small>$150.000</h4>
+            </div>
+          </a>
+        </div>
+        <button
+          class="slick-arrow slick-next"
+          id="button-next"
+          data-button="button-next"
+          onclick="app.processingButton(event)"
+        >
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="chevron-right"
+            class="svg-inline--fa fa-chevron-right fa-w-10"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <path
+              fill="currentColor"
+              d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="Carousel">
+      <h2>Auriculares</h2>
+      <div class="slick-list" id="slick-list">
+        <button
+          class="slick-arrow slick-prev"
+          id="button-prev"
+          data-button="button-prev"
+          onclick="app.processingButton(event)"
+        >
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="chevron-left"
+            class="svg-inline--fa fa-chevron-left fa-w-10"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <path
+              fill="currentColor"
+              d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+            ></path>
+          </svg>
+        </button>
+        <div class="slick-track" id="track">
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular1-1.png"
+                alt=""
+                style="width: 350px"
+              />
+              <h4><small>Moto EDGE 30</small>$120.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular2-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy A03s</small>$55.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular3-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy M23</small>$110.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular4-1.png"
+                alt=""
+                style="width: 350px"
+              />
+              <h4><small>Moto G51</small>$73.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular5-1.png"
+                alt=""
+                style="width: 350px"
+              />
+              <h4><small>Moto G71</small>$89.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular6-1.png"
+                alt=""
+                style="width: 350px"
+              />
+              <h4><small>Moto G32</small>$68.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular7-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy A04</small>$65.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular8-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy M13</small>$76.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular9-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy A53</small>$150.000</h4>
+            </div>
+          </a>
+        </div>
+        <button
+          class="slick-arrow slick-next"
+          id="button-next"
+          data-button="button-next"
+          onclick="app.processingButton(event)"
+        >
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="chevron-right"
+            class="svg-inline--fa fa-chevron-right fa-w-10"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <path
+              fill="currentColor"
+              d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="Carousel">
+      <h2>Fundas</h2>
+      <div class="slick-list" id="slick-list">
+        <button
+          class="slick-arrow slick-prev"
+          id="button-prev"
+          data-button="button-prev"
+          onclick="app.processingButton(event)"
+        >
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="chevron-left"
+            class="svg-inline--fa fa-chevron-left fa-w-10"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <path
+              fill="currentColor"
+              d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+            ></path>
+          </svg>
+        </button>
+        <div class="slick-track" id="track">
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular1-1.png"
+                alt=""
+                style="width: 350px"
+              />
+              <h4><small>Moto EDGE 30</small>$120.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular2-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy A03s</small>$55.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular3-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy M23</small>$110.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular4-1.png"
+                alt=""
+                style="width: 350px"
+              />
+              <h4><small>Moto G51</small>$73.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular5-1.png"
+                alt=""
+                style="width: 350px"
+              />
+              <h4><small>Moto G71</small>$89.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular6-1.png"
+                alt=""
+                style="width: 350px"
+              />
+              <h4><small>Moto G32</small>$68.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular7-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy A04</small>$65.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular8-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy M13</small>$76.000</h4>
+            </div>
+          </a>
+
+          <a class="slick">
+            <div>
+              <img
+                src="./imagenes/celular9-1.png"
+                alt=""
+                style="width: 400px"
+              />
+              <h4><small>Samsung Galaxy A53</small>$150.000</h4>
+            </div>
+          </a>
+        </div>
+        <button
+          class="slick-arrow slick-next"
+          id="button-next"
+          data-button="button-next"
+          onclick="app.processingButton(event)"
+        >
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="chevron-right"
+            class="svg-inline--fa fa-chevron-right fa-w-10"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <path
+              fill="currentColor"
+              d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
