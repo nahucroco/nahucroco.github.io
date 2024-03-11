@@ -1,0 +1,62 @@
+[
+    {
+        "idMedico": 0,
+        "usuarioAMR": "dsfsf",
+        "contrasenaAMR": "sdfsdasdf",
+        "apellidoMedico": "Piana",
+        "nombreMedico": "Leandra",
+        "telefono": "324324234",
+        "mail": "dfdffg",
+        "arrayOS": [
+            {
+                "nombreObraSocial": "Jerarquicos",
+                "idObraSocial": 0,
+                "planes": []
+            },
+            {
+                "nombreObraSocial": "IOSFA",
+                "idObraSocial": 1,
+                "planes": []
+            },
+            {
+                "nombreObraSocial": "IAPOS",
+                "idObraSocial": 2,
+                "planes": []
+            }
+        ]
+    },
+    {
+        "idMedico": 1,
+        "usuarioAMR": "gobbo_gaby",
+        "contrasenaAMR": "123456",
+        "apellidoMedico": "Gobbo",
+        "nombreMedico": "Gabriel",
+        "telefono": "3417482992",
+        "mail": "sajhndajskd",
+        "arrayOS": [
+            {
+                "nombreObraSocial": "IOSFA",
+                "idObraSocial": 1,
+                "planes": []
+            },
+            {
+                "idObraSocial": 3,
+                "nombreObraSocial": "Jerarquicos",
+                "arrayPlanes": [
+                    "Plan1",
+                    "Plan2",
+                    "Plan3"
+                ]
+            },
+            {
+                "idObraSocial": 5,
+                "nombreObraSocial": "IAPOS",
+                "arrayPlanes": [
+                    "Plan1",
+                    "Plan2",
+                    "Plan3"
+                ]
+            }
+        ]
+    }
+]

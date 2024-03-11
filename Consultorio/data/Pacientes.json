@@ -1,0 +1,63 @@
+[
+    {
+        "idPaciente": 0,
+        "dni": "43992532",
+        "telefono": "3432432432",
+        "apellidoPaciente": "Crocombette",
+        "nombrePaciente": "Nahuel",
+        "nroAfiliado": "32432123",
+        "arrayOS": [
+            {
+                "nombreObraSocial": "Jerarquicos",
+                "idObraSocial": 3,
+                "arrayPlanes": [
+                    "Plan1",
+                    "Plan2",
+                    "Plan3"
+                ]
+            },
+            {
+                "nombreObraSocial": "IOSFA",
+                "idObraSocial": 1,
+                "arrayPlanes": []
+            }
+        ]
+    },
+    {
+        "idPaciente": 1,
+        "dni": "43895872",
+        "telefono": "3418573788",
+        "apellidoPaciente": "Martinelli",
+        "nombrePaciente": "Ivan",
+        "nroAfiliado": "12345",
+        "arrayOS": [
+            {
+                "idObraSocial": 3,
+                "nombreObraSocial": "Jerarquicos",
+                "arrayPlanes": [
+                    "Plan1",
+                    "Plan2",
+                    "Plan3"
+                ]
+            },
+            {
+                "idObraSocial": 3,
+                "nombreObraSocial": "Jerarquicos",
+                "arrayPlanes": [
+                    "Plan1",
+                    "Plan2",
+                    "Plan3"
+                ]
+            },
+            {
+                "idObraSocial": 3,
+                "nombreObraSocial": "Jerarquicos",
+                "arrayPlanes": [
+                    "Plan1",
+                    "Plan2",
+                    "Plan3"
+                ]
+            }
+        ]
+    }
+]

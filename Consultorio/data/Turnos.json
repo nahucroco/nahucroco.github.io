@@ -1,0 +1,364 @@
+[
+    {
+        "idTurno": 0,
+        "dia": "12-03-2024",
+        "horario": "09:20",
+        "paciente": {
+            "idPaciente": 0,
+            "dni": "43992532",
+            "telefono": "3432432432",
+            "apellidoPaciente": "Crocombette",
+            "nombrePaciente": "Nahuel",
+            "nroAfiliado": "32432123",
+            "arrayOS": [
+                {
+                    "nombreObraSocial": "Jerarquicos",
+                    "idObraSocial": 3,
+                    "arrayPlanes": [
+                        "Plan1",
+                        "Plan2",
+                        "Plan3"
+                    ]
+                },
+                {
+                    "nombreObraSocial": "IOSFA",
+                    "idObraSocial": 1,
+                    "arrayPlanes": []
+                }
+            ]
+        },
+        "medico": {
+            "idMedico": 0,
+            "usuarioAMR": "dsfsf",
+            "contrasenaAMR": "sdfsdasdf",
+            "apellidoMedico": "Piana",
+            "nombreMedico": "Leandra",
+            "telefono": "324324234",
+            "mail": "dfdffg",
+            "arrayOS": [
+                {
+                    "nombreObraSocial": "Jerarquicos",
+                    "idObraSocial": 0,
+                    "planes": []
+                },
+                {
+                    "nombreObraSocial": "IOSFA",
+                    "idObraSocial": 1,
+                    "planes": []
+                },
+                {
+                    "nombreObraSocial": "IAPOS",
+                    "idObraSocial": 2,
+                    "planes": []
+                }
+            ]
+        },
+        "obraSocial": {
+            "nombreObraSocial": "IOSFA",
+            "idObraSocial": 1,
+            "arrayPlanes": []
+        }
+    },
+    {
+        "idTurno": 1,
+        "dia": "12-03-2024",
+        "horario": "10:20",
+        "paciente": {
+            "idPaciente": 1,
+            "dni": "43895872",
+            "telefono": "3418573788",
+            "apellidoPaciente": "Martinelli",
+            "nombrePaciente": "Ivan",
+            "nroAfiliado": "12345",
+            "arrayOS": [
+                {
+                    "idObraSocial": 3,
+                    "nombreObraSocial": "Jerarquicos",
+                    "arrayPlanes": [
+                        "Plan1",
+                        "Plan2",
+                        "Plan3"
+                    ]
+                },
+                {
+                    "idObraSocial": 3,
+                    "nombreObraSocial": "Jerarquicos",
+                    "arrayPlanes": [
+                        "Plan1",
+                        "Plan2",
+                        "Plan3"
+                    ]
+                },
+                {
+                    "idObraSocial": 3,
+                    "nombreObraSocial": "Jerarquicos",
+                    "arrayPlanes": [
+                        "Plan1",
+                        "Plan2",
+                        "Plan3"
+                    ]
+                }
+            ]
+        },
+        "medico": {
+            "idMedico": 1,
+            "usuarioAMR": "gobbo_gaby",
+            "contrasenaAMR": "123456",
+            "apellidoMedico": "Gobbo",
+            "nombreMedico": "Gabriel",
+            "telefono": "3417482992",
+            "mail": "sajhndajskd",
+            "arrayOS": [
+                {
+                    "nombreObraSocial": "IOSFA",
+                    "idObraSocial": 1,
+                    "planes": []
+                },
+                {
+                    "idObraSocial": 3,
+                    "nombreObraSocial": "Jerarquicos",
+                    "arrayPlanes": [
+                        "Plan1",
+                        "Plan2",
+                        "Plan3"
+                    ]
+                },
+                {
+                    "idObraSocial": 5,
+                    "nombreObraSocial": "IAPOS",
+                    "arrayPlanes": [
+                        "Plan1",
+                        "Plan2",
+                        "Plan3"
+                    ]
+                }
+            ]
+        },
+        "obraSocial": {
+            "idObraSocial": 3,
+            "nombreObraSocial": "Jerarquicos",
+            "arrayPlanes": [
+                "Plan1",
+                "Plan2",
+                "Plan3"
+            ]
+        }
+    },
+    {
+        "idTurno": 2,
+        "dia": "12-03-2024",
+        "horario": "18:10",
+        "paciente": {
+            "idPaciente": 1,
+            "dni": "43895872",
+            "telefono": "3418573788",
+            "apellidoPaciente": "Martinelli",
+            "nombrePaciente": "Ivan",
+            "nroAfiliado": "12345",
+            "arrayOS": [
+                {
+                    "idObraSocial": 3,
+                    "nombreObraSocial": "Jerarquicos",
+                    "arrayPlanes": [
+                        "Plan1",
+                        "Plan2",
+                        "Plan3"
+                    ]
+                },
+                {
+                    "idObraSocial": 3,
+                    "nombreObraSocial": "Jerarquicos",
+                    "arrayPlanes": [
+                        "Plan1",
+                        "Plan2",
+                        "Plan3"
+                    ]
+                },
+                {
+                    "idObraSocial": 3,
+                    "nombreObraSocial": "Jerarquicos",
+                    "arrayPlanes": [
+                        "Plan1",
+                        "Plan2",
+                        "Plan3"
+                    ]
+                }
+            ]
+        },
+        "medico": {
+            "idMedico": 0,
+            "usuarioAMR": "dsfsf",
+            "contrasenaAMR": "sdfsdasdf",
+            "apellidoMedico": "Piana",
+            "nombreMedico": "Leandra",
+            "telefono": "324324234",
+            "mail": "dfdffg",
+            "arrayOS": [
+                {
+                    "nombreObraSocial": "Jerarquicos",
+                    "idObraSocial": 0,
+                    "planes": []
+                },
+                {
+                    "nombreObraSocial": "IOSFA",
+                    "idObraSocial": 1,
+                    "planes": []
+                },
+                {
+                    "nombreObraSocial": "IAPOS",
+                    "idObraSocial": 2,
+                    "planes": []
+                }
+            ]
+        },
+        "obraSocial": {
+            "idObraSocial": 3,
+            "nombreObraSocial": "Jerarquicos",
+            "arrayPlanes": [
+                "Plan1",
+                "Plan2",
+                "Plan3"
+            ]
+        }
+    },
+    {
+        "idTurno": 3,
+        "dia": "12-03-2024",
+        "horario": "09:00",
+        "paciente": {
+            "idPaciente": 0,
+            "dni": "43992532",
+            "telefono": "3432432432",
+            "apellidoPaciente": "Crocombette",
+            "nombrePaciente": "Nahuel",
+            "nroAfiliado": "32432123",
+            "arrayOS": [
+                {
+                    "nombreObraSocial": "Jerarquicos",
+                    "idObraSocial": 3,
+                    "arrayPlanes": [
+                        "Plan1",
+                        "Plan2",
+                        "Plan3"
+                    ]
+                },
+                {
+                    "nombreObraSocial": "IOSFA",
+                    "idObraSocial": 1,
+                    "arrayPlanes": []
+                }
+            ]
+        },
+        "medico": {
+            "idMedico": 1,
+            "usuarioAMR": "gobbo_gaby",
+            "contrasenaAMR": "123456",
+            "apellidoMedico": "Gobbo",
+            "nombreMedico": "Gabriel",
+            "telefono": "3417482992",
+            "mail": "sajhndajskd",
+            "arrayOS": [
+                {
+                    "nombreObraSocial": "IOSFA",
+                    "idObraSocial": 1,
+                    "planes": []
+                },
+                {
+                    "idObraSocial": 3,
+                    "nombreObraSocial": "Jerarquicos",
+                    "arrayPlanes": [
+                        "Plan1",
+                        "Plan2",
+                        "Plan3"
+                    ]
+                },
+                {
+                    "idObraSocial": 5,
+                    "nombreObraSocial": "IAPOS",
+                    "arrayPlanes": [
+                        "Plan1",
+                        "Plan2",
+                        "Plan3"
+                    ]
+                }
+            ]
+        },
+        "obraSocial": {
+            "idObraSocial": 3,
+            "nombreObraSocial": "Jerarquicos",
+            "arrayPlanes": [
+                "Plan1",
+                "Plan2",
+                "Plan3"
+            ]
+        }
+    },
+    {
+        "idTurno": 4,
+        "dia": "13-03-2024",
+        "horario": "09:20",
+        "paciente": {
+            "idPaciente": 0,
+            "dni": "43992532",
+            "telefono": "3432432432",
+            "apellidoPaciente": "Crocombette",
+            "nombrePaciente": "Nahuel",
+            "nroAfiliado": "32432123",
+            "arrayOS": [
+                {
+                    "nombreObraSocial": "Jerarquicos",
+                    "idObraSocial": 3,
+                    "arrayPlanes": [
+                        "Plan1",
+                        "Plan2",
+                        "Plan3"
+                    ]
+                },
+                {
+                    "nombreObraSocial": "IOSFA",
+                    "idObraSocial": 1,
+                    "arrayPlanes": []
+                }
+            ]
+        },
+        "medico": {
+            "idMedico": 1,
+            "usuarioAMR": "gobbo_gaby",
+            "contrasenaAMR": "123456",
+            "apellidoMedico": "Gobbo",
+            "nombreMedico": "Gabriel",
+            "telefono": "3417482992",
+            "mail": "sajhndajskd",
+            "arrayOS": [
+                {
+                    "nombreObraSocial": "IOSFA",
+                    "idObraSocial": 1,
+                    "planes": []
+                },
+                {
+                    "idObraSocial": 3,
+                    "nombreObraSocial": "Jerarquicos",
+                    "arrayPlanes": [
+                        "Plan1",
+                        "Plan2",
+                        "Plan3"
+                    ]
+                },
+                {
+                    "idObraSocial": 5,
+                    "nombreObraSocial": "IAPOS",
+                    "arrayPlanes": [
+                        "Plan1",
+                        "Plan2",
+                        "Plan3"
+                    ]
+                }
+            ]
+        },
+        "obraSocial": {
+            "nombreObraSocial": "IOSFA",
+            "idObraSocial": 1,
+            "arrayPlanes": []
+        }
+    }
+]
