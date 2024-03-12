@@ -1,35 +1,3 @@
 [
-    {
-        "nombreObraSocial": "IOSFA",
-        "idObraSocial": 1,
-        "arrayPlanes": []
-    },
-    {
-        "idObraSocial": 3,
-        "nombreObraSocial": "Jerarquicos",
-        "arrayPlanes": [
-            "Plan1",
-            "Plan2",
-            "Plan3"
-        ]
-    },
-    {
-        "idObraSocial": 4,
-        "nombreObraSocial": "Medife",
-        "arrayPlanes": [
-            "Plan1",
-            "Plan2",
-            "Plan3",
-            "Plan4"
-        ]
-    },
-    {
-        "idObraSocial": 5,
-        "nombreObraSocial": "IAPOS",
-        "arrayPlanes": [
-            "Plan1",
-            "Plan2",
-            "Plan3"
-        ]
-    }
+
 ]
