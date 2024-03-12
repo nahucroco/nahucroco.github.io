@@ -22,8 +22,6 @@ donde se carga cada instancia creada. En la carpeta files se hayan dos archivos 
 
 ## Fallas y correciones en proceso
 
-- Dar de baja a una instancia de cualquier clase.
 - Seleccionar un plan a la hora de registrar nuevo turno.
 - Mostrar mensajes de alerta al usuario que actualmente se muestran en consola.
-- La tabla de turnos no se actualiza cuando eliminamos un turno y luego volvemos a pulsar "Buscar".
-- Cuando vamos a seleccionar una obra social para registrar un nuevo turno algunas de estas se muestran repetidas veces.
+- La tabla de turnos no se actualiza siempre cuando sleccionamos un día con todos los turnos libres.
