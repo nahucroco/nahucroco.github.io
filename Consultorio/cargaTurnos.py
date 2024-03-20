@@ -366,6 +366,8 @@ def menuPrincipal(app, main_view):
                 break
         with open('data/Turnos.json', 'w') as archivo:
             json.dump(turnos, archivo, indent=4)
+        mensajeError("""             Turno eliminado con éxito!
+                     IMPORTANTE: Salga y vuelva a ingresar al apartado Turnos para actualizar la agenda""")
 
     CTkButton(master=title_frame, text="Eliminar turno",  font=("Arial", 15, "bold"), text_color="#6BAAA2", fg_color="transparent", hover_color="#E6E6E6", width=130, border_color="#6BAAA2", border_width=2, command=eliminarTurno).pack(anchor="center", side="right", padx=(0,18))
    
@@ -413,7 +415,7 @@ def menuPrincipal(app, main_view):
         turnos.append(json.loads(nuevo_objeto_json))
         with open("data/Turnos.json", "w", encoding="utf-8") as archivo:
             json.dump(turnos, archivo, indent=4, ensure_ascii=False)
-        print("Turno registrado")
+        mensajeError("Turno registrado con éxito!")
         
     def validarTurno():
         ocupado = False
@@ -439,3 +441,23 @@ def menuPrincipal(app, main_view):
     ######################################### PROGRAMA PRINCIPAL #########################################################
     CTkButton(master=resevar_container, text="Reservar turno",  font=("Arial", 14, "bold"), text_color="#F9F9FA", fg_color="#6BAAA2", hover_color="#55958D", width=130, command=validarTurno).grid(row=0, column=7, padx=(50,0), pady=10)    
     
+    def mensajeError(error):
+        notificacion = CTkToplevel(app)
+        notificacion.title("Mensaje")
+        notificacion.geometry("550x100")
+        x = app.winfo_x()
+        y = app.winfo_y()
+        width = app.winfo_width()
+        height = app.winfo_height()
+    
+        # Calcular la posición centrada para la ventana emergente
+        x_pos = x + (width - notificacion.winfo_reqwidth()) // 2
+        y_pos = y + (height - notificacion.winfo_reqheight()) // 2
+    
+        # Establecer la posición de la ventana emergente
+        notificacion.geometry("+{}+{}".format(x_pos, y_pos))
+        mensaje = CTkLabel(notificacion, text=error)
+        mensaje.pack(pady=10)
+        boton_cerrar = CTkButton(notificacion, text="Cerrar", command=notificacion.destroy, fg_color="#6BAAA2", font=("Arial", 13, "bold"))
+        boton_cerrar.pack()
+        notificacion.attributes('-topmost', True)

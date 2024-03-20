@@ -43,7 +43,8 @@ def menuPrincipal(app, main_view):
 
     ########################################################### REGISTRAR PACIENTE #####################################################
     
-    def registrarPaciente():
+    def registrarObraSocial():
+        global arrayPlanes
         validaOS = False
         nombre = entOS.get()
 
@@ -78,11 +79,13 @@ def menuPrincipal(app, main_view):
             with open("data/ObrasSociales.json", "w", encoding="utf-8") as archivo:
                 json.dump(obrasSociales, archivo, indent=4, ensure_ascii=False)
             mensajeError("Obra Social cargada con éxito!")
+            arrayPlanes = []
 
         else:
+            arrayPlanes = []
             mensajeError("Obra Social inválida o repetida")
 
-    CTkButton(master=title_frame, text="Registrar obra social",  font=("Arial Regular", 15), text_color="#1E1E1E", fg_color="#85E6C0", hover_color="#25B47A", command=registrarPaciente).pack(anchor="ne", side="right")
+    CTkButton(master=title_frame, text="Registrar obra social",  font=("Arial Regular", 15), text_color="#1E1E1E", fg_color="#85E6C0", hover_color="#25B47A", command=registrarObraSocial).pack(anchor="ne", side="right")
     
     ############################################## ELIMINAR PACIENTE #############################################################
     

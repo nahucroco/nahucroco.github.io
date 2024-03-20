@@ -130,43 +130,55 @@ def menuPrincipal(app, main_view):
         usuario = entUser.get()
         contrasena = entPass.get()
         arrayOS = []
+        repetido = False
+
         with open("data/ObrasSociales.json", "r", encoding="utf-8") as archivo:
             obrasSociales = json.load(archivo)
         for os in arregloOS:
             for obraSocial in obrasSociales:
                 if obraSocial['nombreObraSocial'] == os:
                     arrayOS.append(obraSocial)
+        
+        with open("data/Medicos.json", "r", encoding="utf-8") as archivo:
+            medicos = json.load(archivo)
+        for medico in medicos:
+            if medico['usuarioAMR'] == usuario:
+                repetido = True
+
         if nombre != "": 
             if apellido != "": 
                 if arrayOS != []:
-                    with open("data/Medicos.json", "r", encoding="utf-8") as archivo:
-                        medicos = json.load(archivo)
-                    if medicos == []:
-                        nuevo_id = 0
-                    else:
-                        ultimo_id = medicos[-1]["idMedico"]
-                        nuevo_id = ultimo_id + 1
+                    if repetido == False:
+                        with open("data/Medicos.json", "r", encoding="utf-8") as archivo:
+                            medicos = json.load(archivo)
+                        if medicos == []:
+                            nuevo_id = 0
+                        else:
+                            ultimo_id = medicos[-1]["idMedico"]
+                            nuevo_id = ultimo_id + 1
 
-                    nueva_instancia = Medico(nuevo_id, usuario, contrasena, apellido, nombre, telefono, mail, arrayOS) 
+                        nueva_instancia = Medico(nuevo_id, usuario, contrasena, apellido, nombre, telefono, mail, arrayOS) 
 
-                    print(nueva_instancia)
-                    nuevo_objeto = {
-                    "idMedico": nueva_instancia.idMedico,
-                    "usuarioAMR": nueva_instancia.usuarioAMR,    
-                    "contrasenaAMR": nueva_instancia.contrasenaAMR,
-                    "apellidoMedico": nueva_instancia.apellidoMedico,
-                    "nombreMedico": nueva_instancia.nombreMedico,   
-                    "telefono": nueva_instancia.telefono,
-                    "mail": nueva_instancia.mail,
-                    "arrayOS": nueva_instancia.arrayOS
-                    }
+                        print(nueva_instancia)
+                        nuevo_objeto = {
+                        "idMedico": nueva_instancia.idMedico,
+                        "usuarioAMR": nueva_instancia.usuarioAMR,    
+                        "contrasenaAMR": nueva_instancia.contrasenaAMR,
+                        "apellidoMedico": nueva_instancia.apellidoMedico,
+                        "nombreMedico": nueva_instancia.nombreMedico,   
+                        "telefono": nueva_instancia.telefono,
+                        "mail": nueva_instancia.mail,
+                        "arrayOS": nueva_instancia.arrayOS
+                        }
 
-                    nuevo_objeto_json = json.dumps(nuevo_objeto)
-                    medicos.append(json.loads(nuevo_objeto_json))
-                    with open("data/Medicos.json", "w", encoding="utf-8") as archivo:
-                        json.dump(medicos, archivo, indent=4, ensure_ascii=False)
-                    mensajeError("Médico cargado con éxito!")
-                    arregloOS = []
+                        nuevo_objeto_json = json.dumps(nuevo_objeto)
+                        medicos.append(json.loads(nuevo_objeto_json))
+                        with open("data/Medicos.json", "w", encoding="utf-8") as archivo:
+                            json.dump(medicos, archivo, indent=4, ensure_ascii=False)
+                        mensajeError("Médico cargado con éxito!")
+                        arregloOS = []
+                    else: 
+                        mensajeError("Medico ya existente")
                 else: 
                     mensajeError("Ingresar al menos una obra social")
             else:
