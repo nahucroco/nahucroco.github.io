@@ -1,0 +1,50 @@
+import tkinter as tk
+
+def centrar_ventana(ventana):
+    ventana.update_idletasks()
+    ancho_ventana = ventana.winfo_width()
+    alto_ventana = ventana.winfo_height()
+    x = (ventana.winfo_screenwidth() // 2) - (ancho_ventana // 2)
+    y = (ventana.winfo_screenheight() // 2) - (alto_ventana // 2)
+    ventana.geometry('{}x{}+{}+{}'.format(ancho_ventana, alto_ventana, x, y))
+
+
+ventanaMain = tk.Tk()
+ventanaMain.geometry("1300x800")
+ventanaMain.title("MiKiosco")
+centrar_ventana(ventanaMain)
+
+ventanaCarga = tk.Toplevel(ventanaMain)
+ventanaCarga.title("Agregar artículo")
+ventanaCarga.geometry("600x120")
+centrar_ventana(ventanaCarga)
+
+labelNom = tk.Label(ventanaCarga,text="Nombre",font=("Arial", 11))
+labelNom.grid(padx=(20,0), pady=(10,0),row=0,column=0)
+entryNom = tk.Entry(ventanaCarga)
+entryNom.grid(padx=(20,0), pady=(10,0),row=0,column=1)
+labelNom = tk.Label(ventanaCarga,text="Categoría",font=("Arial", 11))
+labelNom.grid(padx=(20,0), pady=(10,0),row=0,column=2)
+entryNom = tk.Entry(ventanaCarga)
+entryNom.grid(padx=(20,0), pady=(10,0),row=0,column=3)
+labelNom = tk.Label(ventanaCarga,text="Peso (g)",font=("Arial", 11))
+labelNom.grid(padx=(20,0), pady=(10,0),row=1,column=0)
+entryNom = tk.Entry(ventanaCarga)
+entryNom.grid(padx=(20,0), pady=(10,0),row=1,column=1)
+labelNom = tk.Label(ventanaCarga,text="Marca",font=("Arial", 11))
+labelNom.grid(padx=(20,0), pady=(10,0),row=1,column=2)
+entryNom = tk.Entry(ventanaCarga)
+entryNom.grid(padx=(20,0), pady=(10,0),row=1,column=3)
+labelNom = tk.Label(ventanaCarga,text="Precio",font=("Arial", 11))
+labelNom.grid(padx=(20,0), pady=(10,0),row=2,column=0)
+entryNom = tk.Entry(ventanaCarga)
+entryNom.grid(padx=(20,0), pady=(10,0),row=2,column=1)
+labelNom = tk.Label(ventanaCarga,text="Código",font=("Arial", 11))
+labelNom.grid(padx=(20,0), pady=(10,0),row=2,column=2)
+entryNom = tk.Entry(ventanaCarga)
+entryNom.grid(padx=(20,0), pady=(10,0),row=2,column=3)
+
+btnAgregar = tk.Button(ventanaCarga, text="Agregar", width=12)
+btnAgregar.grid(padx=(30,0), pady=(10,0),row=1,column=4)
+
+ventanaMain.mainloop()
