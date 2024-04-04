@@ -39,8 +39,8 @@ def main():
 
     menuArticulos=tk.Menu(barraMenu,tearoff=0)
     barraMenu.add_cascade(label="Artículos", menu=menuArticulos)
-    menuArticulos.add_command(label="Cargar artículo", command=agregarArticulo)
-    menuArticulos.add_command(label="Modificar artículo")
+    menuArticulos.add_command(label="Cargar artículo", command=lambda: ingresoDatos(None))
+    menuArticulos.add_command(label="Modificar artículo", command=ingresoCodigo)
 
     menuVentas = tk.Menu(barraMenu,tearoff=0)
     barraMenu.add_cascade(label="Ventas", menu=menuVentas)
@@ -77,7 +77,7 @@ def main():
     spinCantidad = tk.Spinbox(marco, from_=0, to=100, increment=1, width=10, font=("Arial", 11))
     spinCantidad.grid(pady=(5,0), row=0, column=3)
 
-    btnAgregar = tk.Button(marco, text="Agregar", command=lambda: buscarArticulo(entryCodigo.get(), int(spinCantidad.get())))
+    btnAgregar = tk.Button(marco, text="Agregar", command=lambda: agregarArticuloTabla(entryCodigo.get(), int(spinCantidad.get())))
     btnAgregar.grid(pady=(10,0), row=0, column=4, padx=(20,0))
 
     #################################################### LISTA ############################################################
@@ -116,9 +116,8 @@ def main():
 
     ventanaMain.mainloop()
 
-def buscarArticulo(codigo, cantidad):
+def agregarArticuloTabla(codigo, cantidad):
     global contador_filas
-    print(cantidad)
     if cantidad == 0:
         messagebox.showerror('Error', "Ingresar una cantidad válida")
     else:       
@@ -127,47 +126,87 @@ def buscarArticulo(codigo, cantidad):
         if articulo == None:
             messagebox.showerror('Error', "Ingresar un código válido")
         else:
-            tabla.insert('', 'end', text=str(contador_filas), values=(cantidad,) + articulo)
-            contador_filas += 1
+            if cantidad != None:
+                tabla.insert('', 'end', text=str(contador_filas), values=(cantidad,) + articulo)
+                contador_filas += 1
+            else:
+                ingresoDatos(articulo)
 
-def agregarArticulo():
+def ingresoDatos(articulo):
     ventanaCarga = tk.Toplevel(ventanaMain)
     ventanaCarga.title("Agregar artículo")
     ventanaCarga.geometry("690x120")
     centrarVentana(ventanaCarga)
 
+    if articulo == None:
+        var = "agregar"
+        nombre = ""
+        categoria = ""
+        peso = ""
+        marca = ""
+        precio = ""
+        codigo = ""
+    else: 
+        var = "editar"
+        nombre = tk.StringVar()
+        nombre.set(articulo[0])
+        categoria = tk.StringVar()
+        categoria.set(articulo[1])
+        peso = tk.StringVar()
+        peso.set(articulo[2])
+        marca = tk.StringVar()
+        marca.set(articulo[3])
+        precio = tk.StringVar()
+        precio.set(articulo[4])
+        codigo = tk.StringVar()
+        codigo.set(articulo[5])
+
     labelNom = tk.Label(ventanaCarga,text="Nombre",font=("Arial", 11))
     labelNom.grid(padx=(20,0), pady=(10,0),row=0,column=0)
-    entryNom = tk.Entry(ventanaCarga, font=("Arial", 11))
+    entryNom = tk.Entry(ventanaCarga, font=("Arial", 11), textvariable=nombre)
     entryNom.grid(padx=(20,0), pady=(10,0),row=0,column=1)
 
     labelCat = tk.Label(ventanaCarga,text="Categoría",font=("Arial", 11))
     labelCat.grid(padx=(20,0), pady=(10,0),row=0,column=2)
-    entryCat = tk.Entry(ventanaCarga, font=("Arial", 11))
+    entryCat = tk.Entry(ventanaCarga, font=("Arial", 11), textvariable=categoria)
     entryCat.grid(padx=(20,0), pady=(10,0),row=0,column=3)
 
     labelPeso = tk.Label(ventanaCarga,text="Peso (g - L)",font=("Arial", 11))
     labelPeso.grid(padx=(20,0), pady=(10,0),row=1,column=0)
-    entryPeso = tk.Entry(ventanaCarga, font=("Arial", 11))
+    entryPeso = tk.Entry(ventanaCarga, font=("Arial", 11), textvariable=peso)
     entryPeso.grid(padx=(20,0), pady=(10,0),row=1,column=1)
 
     labelMar = tk.Label(ventanaCarga,text="Marca",font=("Arial", 11))
     labelMar.grid(padx=(20,0), pady=(10,0),row=1,column=2)
-    entryMar = tk.Entry(ventanaCarga, font=("Arial", 11))
+    entryMar = tk.Entry(ventanaCarga, font=("Arial", 11), textvariable=marca)
     entryMar.grid(padx=(20,0), pady=(10,0),row=1,column=3)
 
     labelPre = tk.Label(ventanaCarga,text="Precio",font=("Arial", 11))
     labelPre.grid(padx=(20,0), pady=(10,0),row=2,column=0)
-    entryPre = tk.Entry(ventanaCarga, font=("Arial", 11))
+    entryPre = tk.Entry(ventanaCarga, font=("Arial", 11), textvariable=precio)
     entryPre.grid(padx=(20,0), pady=(10,0),row=2,column=1)
 
     labelCod = tk.Label(ventanaCarga,text="Código",font=("Arial", 11))
     labelCod.grid(padx=(20,0), pady=(10,0),row=2,column=2)
-    entryCod = tk.Entry(ventanaCarga, font=("Arial", 11))
+    entryCod = tk.Entry(ventanaCarga, font=("Arial", 11), textvariable=codigo)
     entryCod.grid(padx=(20,0), pady=(10,0),row=2,column=3)
 
-    btnAgregar = tk.Button(ventanaCarga, text="Agregar", width=12, command=lambda: agregarArticuloDB(entryNom.get(), entryCat.get(), entryCod.get(), entryMar.get(), entryPeso.get(), entryPre.get(), ventanaCarga))
+    btnAgregar = tk.Button(ventanaCarga, text="Agregar", width=12, command=lambda: editarArticuloDB(str(entryNom.get()), entryCat.get(), int(entryCod.get()), entryMar.get(), entryPeso.get(), float(entryPre.get()), ventanaCarga, var))
     btnAgregar.grid(padx=(30,0), pady=(10,0),row=1,column=4)
+
+def ingresoCodigo():
+    ventanaBuscar = tk.Toplevel(ventanaMain)
+    ventanaBuscar.title("Buscar artículo")
+    ventanaBuscar.geometry("400x50")
+    centrarVentana(ventanaBuscar)
+
+    labelCod = tk.Label(ventanaBuscar,text="Código:",font=("Arial", 11))
+    labelCod.grid(padx=(20,0), pady=(10,0),row=0,column=0)
+    entryCod = tk.Entry(ventanaBuscar, font=("Arial", 11))
+    entryCod.grid(padx=(20,0), pady=(10,0),row=0,column=1)
+
+    btnBuscar = tk.Button(ventanaBuscar, text="Buscar", width=12, command=lambda: agregarArticuloTabla(entryCod.get(), None))
+    btnBuscar.grid(padx=(30,0), pady=(10,0),row=0,column=2)
 
 def validarContrasena(usuario, pass1, pass2):
     if pass1 == pass2:
