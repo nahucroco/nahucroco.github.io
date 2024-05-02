@@ -1,4 +1,4 @@
-# Primer proyecto Octopush
+# Octopush
 
 Octopush es un equipo creado por un grupo de amigos con ganas de mejorar sus habilidades y comenzar a adquirir sus primeras experiencias profesionales en el mundo del desarrollo de software.
 
