@@ -1,0 +1,94 @@
+{%extends 'layouts/base.html'%}
+{%load static%}
+
+{%block content%}
+
+<h1>Mis notas</h1>
+<div class="container-fluid container-notas">
+    <!-- Filas -->
+    <div class="row">
+        <!-- Columnas -->
+        <div class="col-sm-3">
+            <div class="rectangulo" data-bs-toggle="modal" data-bs-target="#exampleModal" id="nota1" onclick="obtenerNota(this)">+</div>
+        </div>
+        <div class="col-sm-3">
+            <div class="rectangulo" data-bs-toggle="modal" data-bs-target="#exampleModal" id="nota2" onclick="obtenerNota(this)">+</div>
+        </div>
+        <div class="col-sm-3">
+            <div class="rectangulo" data-bs-toggle="modal" data-bs-target="#exampleModal" id="nota3" onclick="obtenerNota(this)">+</div>
+        </div>
+        <div class="col-sm-3">
+            <div class="rectangulo" data-bs-toggle="modal" data-bs-target="#exampleModal" id="nota4" onclick="obtenerNota(this)">+</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="rectangulo" data-bs-toggle="modal" data-bs-target="#exampleModal" id="nota5" onclick="obtenerNota(this)">+</div>
+        </div>
+        <div class="col-sm-3">
+            <div class="rectangulo" data-bs-toggle="modal" data-bs-target="#exampleModal" id="nota6" onclick="obtenerNota(this)">+</div>
+        </div>
+        <div class="col-sm-3">
+            <div class="rectangulo" data-bs-toggle="modal" data-bs-target="#exampleModal" id="nota7" onclick="obtenerNota(this)">+</div>
+        </div>
+        <div class="col-sm-3">
+            <div class="rectangulo" data-bs-toggle="modal" data-bs-target="#exampleModal" id="nota8" onclick="obtenerNota(this)">+</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="rectangulo" data-bs-toggle="modal" data-bs-target="#exampleModal" id="nota9" onclick="obtenerNota(this)">+</div>
+        </div>
+        <div class="col-sm-3">
+            <div class="rectangulo" data-bs-toggle="modal" data-bs-target="#exampleModal" id="nota10" onclick="obtenerNota(this)">+</div>
+        </div>
+        <div class="col-sm-3">
+            <div class="rectangulo" data-bs-toggle="modal" data-bs-target="#exampleModal" id="nota11" onclick="obtenerNota(this)">+</div>
+        </div>
+        <div class="col-sm-3">
+            <div class="rectangulo" data-bs-toggle="modal" data-bs-target="#exampleModal" id="nota12" onclick="obtenerNota(this)">+</div>
+        </div>
+    </div>
+</div>
+
+  
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar nota</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form method="POST" action="{% url 'procesar_formulario' %}">
+        {% csrf_token %}
+        <div class="modal-body">
+          <div class="input-group">
+              <textarea name="texto" class="form-control" aria-label="With textarea" id="miTextarea"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn-customed" data-bs-dismiss="modal">Guardar cambios</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+    function obtenerNota(div) {
+        nota = div
+    }
+    function obtenerTexto() {
+        // Obtener el elemento textarea por su ID
+        var textarea = document.getElementById('miTextarea');
+        // Obtener el texto escrito dentro del textarea usando la propiedad value
+        var texto = textarea.value;
+        // Mostrar el texto obtenido en la consola (puedes hacer cualquier otra cosa con él)
+        nota.classList.add('nota_agregada');
+        nota.innerHTML=texto;
+    } 
+
+</script>
+
+{%endblock%}

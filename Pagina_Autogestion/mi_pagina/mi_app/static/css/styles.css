@@ -1,0 +1,63 @@
+body{
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(14, 16, 13, 0.874);
+}
+
+.navbar{
+    background-color: #cfb590bd;
+}
+
+
+.main{
+    padding: 2rem;
+    background-color:   #F5F5F5;
+}
+
+.rectangulo {
+    background-color: rgba(0, 0, 0, 0.074);
+    height: 14rem; /* Altura de cada rectángulo */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Espacio entre rectángulos */
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.413);
+}
+
+.rectangulo:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.234);
+    font-size: 5rem;
+}
+
+.nota_agregada{
+    font-size: 1rem;
+    justify-content: start;
+    align-items: start;
+    padding: 0.5rem;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, 0.238);
+    color: rgba(14, 16, 13, 0.874);
+}
+
+.nota_agregada:hover{
+    font-size: 1rem;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, 0.238);
+}
+
+.container-notas{
+    display: flex;
+    flex-direction: column;
+}
+
+.col-sm-3{
+    height: 100%;
+    margin: 0.7rem 0;
+}
+
+.btn-customed:hover{
+    background-color: rgba(16, 15, 0, 0.25);
+}
