@@ -4,8 +4,6 @@ Octopush es un equipo creado por un grupo de amigos con ganas de mejorar sus hab
 
 El equipo cuenta actualmente con cinco miembros:
 - Javier Cáceres (Programador Backend)
-- Joaquin Aguilera (Programador Backend)
-- Tomás Loria (Programador Frontend)
 - Nahuel Andrade (Diseñador UX/UI)
 - Nahuel Crocombette (Programador Frontend y Analista)
 
