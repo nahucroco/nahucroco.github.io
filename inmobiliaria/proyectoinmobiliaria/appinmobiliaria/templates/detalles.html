@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmobiliaria</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="{% url 'index'%}" class="logo">Mi Inmobiliaria</a>
+            <ul class="nav-links">
+                <li><a href="{% url 'index'%}">Inicio</a></li>
+                <li><a href="{% url 'propiedades'%}">Propiedades</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="div-detalles">
+        <h1>Casa en {{ propiedad.ubicacion }}</h1>
+        <h2>Precio: {{ propiedad.precio }}</h2>
+        <h2>Tamaño: {{ propiedad.tamanio }}</h2>
+        <img src="{{ propiedad.imagen.url }}" alt="Image">
+        <p>{{ propiedad.descripcion }}</p>
+    </div>
+
+    <script defer src="static/main.js"></script>
+</body>
+</html>
